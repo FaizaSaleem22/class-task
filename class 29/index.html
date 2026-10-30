@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <td>0</td>
+            <td>jhon</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>fem</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>tem</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>pam</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>mark</td>
+            <td>8</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>james</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>ben</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>sam</td>
+            <td>1</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>doe</td>
+            <td>7</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>ken</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">delete</button></td>
+            <td><button onclick="updateForm(this)">update</button></td>
+        </tr>
+       </table>
+
+       <div id="form" onclick="displayForm()">
+        <label for="">Roll no.<input type="number"></label>
+        <label for="">Name<input type="text"></label>
+        <label for="">Marks<input type="number"></label>
+       </div> -->
+       <h2>Students' form</h2>
+
+       <form action="" onsubmit="addStudent(event)" onclick="formAction(event)">
+        <label for="">name: <input type="text" required id="name"></label>
+        <label for="">age: <input type="number" required id="age"></label>
+        <label for="">Roll no: <input type="number" required id="roll"></label>
+        <button type="submit" onclick="studentTableBody()">submit</button>
+       </form> <br>
+
+       <table border="1" border-spacing="20" cell-padding="20" width="700">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Roll</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            
+
+        </tbody>
+       </table>
+    <script src="app.js"></script>
+</body>
+</html>
