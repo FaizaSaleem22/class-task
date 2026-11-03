@@ -1,0 +1,90 @@
+/* Reset margins and set font framework */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Center the calculator viewport-wide */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #111119);
+}
+
+/* Main Container */
+.calculator {
+    background-color: #232334;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    width: 340px;
+}
+
+/* Input Display Box */
+#display {
+    width: 100%;
+    height: 70px;
+    border: none;
+    background-color: #1a1a26;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Grid Layout for Grid Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Universal Button Styles */
+.btn {
+    padding: 18px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #2d2d44;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* Button Hover State */
+.btn:hover {
+    background-color: #3d3d5c;
+}
+
+/* Button Press Effect */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Color accents for functional keys */
+.operator {
+    color: #4ade80; 
+    background-color: #263e30;
+}
+
+.operator:hover {
+    background-color: #345441;
+}
+
+/* Distinct equals button accent */
+.equal {
+    background-color: #22c55e;
+    color: #ffffff;
+    grid-column: span 1; /* Adjust if you want a wider button */
+}
+
+.equal:hover {
+    background-color: #16a34a;
+}
