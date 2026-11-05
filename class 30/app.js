@@ -26,7 +26,7 @@ function appendValue(input){
     display.value += input
 }
 
-function calculateEquals() {
+function calculate() {
     var result = ""
     num1 = Number(num1)
     num2 = Number(num2)
