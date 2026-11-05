@@ -1,0 +1,11 @@
+.hide {
+    display: none;
+}
+#sky {
+    height: 500px;
+    width: 500px;
+}
+#earth {
+    height: 500px;
+    width: 500px;
+}
