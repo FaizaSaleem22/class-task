@@ -4,40 +4,55 @@ var num2 =""
 var operator = ""
 var isSecondNum = false
 function appendValue(input){
-    if(!isSecondNum && (input !== "+" && input !== "-" && input !== "/" && input !== "*" && input !== "%")){
-        display.value += input
-        num1 = input
-    }
-    else if(!isSecondNum && (input === "+" || input === "-" || input === "/" || input === "*" || input === "%")){
-        
-        display.value= input
+    var isOperator = input === "+" || input === "-" || input === "*" || input === "/" || input === "%"
+    if (isOperator && isSecondNumber && num2 === "") {
+        operator= input
+        display.value= display.value.slice(0,-1)
+
+    } else if (!isSecondNumber && !isOperator) {
+        num1 += input
+    } else if (!isSecondNumber && isOperator) {
         operator = input
-        isSecondNum = true
+        isSecondNumber = true
+        console.log("Operator", operator);
+
+    } else if (isSecondNumber && !isOperator) {
+        num2 += input
+        console.log("Num2", num2);
+
     }
-    else if(isSecondNum && (input !== "+" && input !== "-" && input !== "/" && input !== "*" && input !== "%")){
-        
-        display.value += input
-        num2 = input
-    }
+    console.log("Num1", num1);
+
+    display.value += input
 }
-num1= Number(num1)
-num2= Number(num2)
-var result = 
-function calculate(){
-    if(operator === "+"){
-        display.value= num1+num2
+
+function calculateEquals() {
+    var result = ""
+    num1 = Number(num1)
+    num2 = Number(num2)
+
+    if (operator === "+") {
+        result = num1 + num2
+    } else if (operator === "-") {
+        result = num1 - num2
+    } else if (operator === "*") {
+        result = num1 * num2
+    } else if (operator === "") {
+        result = num1 / num2
     }
-    else if(operator === "-"){
-        display.value= num1-num2
-    }
-    else if(operator === "*"){
-        display.value= num1*num2
-    }
-    else if(operator === "/"){
-        display.value= num1/num2
-    }
-    else if(operator === "%"){
-        display.value= num1%num2
-    }
-    display.value= result
+
+    display.value = result
+
+    num1 = result
+    num2 = ""
+    operator = ""
+    isSecondNumber = false
+
+}
+function clearDisplay() {
+    display.value = ""
+    num1 = ""
+    num2 = ""
+    operator = ""
+    isSecondNumber = false
 }
