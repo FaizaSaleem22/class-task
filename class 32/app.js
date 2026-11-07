@@ -4,6 +4,6 @@ var left = 0
 function animateChar(){
     if(event.keyCode === 39)
     char1.style.src="D:\class 32\assets\images\alicewf.gif"
-    left += 10+"px"
+    left += 10
 }
 window.onkeydown=animateChar
